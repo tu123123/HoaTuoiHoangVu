@@ -5,10 +5,12 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
+    "homepage": "https://tu123123.github.io/HoaTuoiHoangVu/",
     "@testing-library/user-event": "^13.2.1",
     "antd": "^5.1.1",
     "antd-img-crop": "^4.5.2",
     "firebase": "^9.15.0",
+    "gh-pages": "^4.0.0",
     "less": "^4.1.3",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
@@ -22,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

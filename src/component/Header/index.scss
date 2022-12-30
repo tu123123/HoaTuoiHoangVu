@@ -1,6 +1,24 @@
 .ComponentHeader{
     height: 30px;
     width: 100vw;
-    color: red;
+    display: grid;
+    grid-template-columns: 50px 1fr 200px;
+    color: white;
     background: black;
+    .menu-ComponentHeader{
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        .menuItem{
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background: pink;
+            }
+            height: 100%;
+            padding: 0px 10px;
+        }
+    }
 }

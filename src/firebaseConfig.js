@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "@firebase/firestore"
 import { collection, getDocs,addDoc, doc, updateDoc,deleteDoc } from "firebase/firestore";
+import { getStorage, ref, uploadBytes } from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyDBor-yNScm2Oq-IJ0O6AloyQCwpCLolM0",
   authDomain: "fbapp-ce8ce.firebaseapp.com",
@@ -44,6 +45,18 @@ const getData =async (db,action) => {
   
   
 }
+ const upload = async (db,id,file,success,err) => {
+  
+  const storage = getStorage();
+  const storageRef = ref(storage, 'img.png');
+  
+  // 'file' comes from the Blob or File API
+  uploadBytes(storageRef, file).then((snapshot) => {
+    console.log('Uploaded a blob or file!');
+  });
+  
+  
+}
  const updateData = async (db,id,data,success,err) => {
   const docRef = doc(firestore, db, id);
   updateDoc(docRef, data)
@@ -56,4 +69,4 @@ const getData =async (db,action) => {
   })
   
 }
-export {firestore,getData,addData,updateData,delData}
+export {firestore,getData,addData,updateData,delData,upload}

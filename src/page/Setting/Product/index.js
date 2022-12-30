@@ -2,7 +2,7 @@ import './index.scss'
 import { Button,Input } from 'antd';
 import Table from '../../../component/Table';
 import Modal from '../../../component/Modal';
-import { getData,addData,updateData,delData } from '../../../firebaseConfig';
+import { getData,addData,updateData,delData,upload } from '../../../firebaseConfig';
 import { useEffect, useRef, useState } from 'react';
 import { icon } from '../../../component/Icon';
 import Loading from '../../../component/Loading';
@@ -47,18 +47,16 @@ useEffect(()=>{
     setloading(true)
     getData('sanpham',(e)=>{
         setData(e)
-       
+        setloading(false)
     })
 },[])
-useEffect(()=>{
-    setloading(false)
-},[data])
+
     return<div className='ProductContainer'>
  
     {open?
         <Popup setloading={()=>{setloading(true)}} dataEdit={dataEdit.current} update={()=>{    setloading(true)
          getData('sanpham',(e)=>{
-        setData(e)
+        setData(e);setloading(false)
     })}} onClose={()=>setOpen(false)}></Popup>
     :undefined}
   
@@ -67,7 +65,6 @@ useEffect(()=>{
         onDoubleClick:(e)=>{
             dataEdit.current=e
             setOpen(true)
-
         },
         onClick:(e)=>{
             dataEdit.current=e
@@ -83,20 +80,38 @@ const Popup=({onClose,update,dataEdit,setloading})=>{
         maSP:'',
         giaSP:'',
     })
+    const [img,setImg]=useState()
     const [loading,setA]=useState(false);
-    useEffect(()=>{
-      
-    },[])
+   
 
     return <Modal onOk={()=>{
         setA(true)
        setTimeout(()=>{
         if(dataEdit)
         {
-            updateData('sanpham',dataEdit.id,data,()=>{update();onClose()}, setA(false))
+            updateData('sanpham',dataEdit.id,data,()=>{update();
+                if(img)
+            {
+                upload('','',img.file,)
+            }
+            else{
+                onClose()
+            }
+            }, setA(false))
+           
         }
         else{
-            addData('sanpham',{...data},()=>{update();onClose()},setA(false))
+            addData('sanpham',{...data},()=>{update() ;
+            
+                if(img)
+            {
+                upload('','',img.file,)
+            }
+            else{
+                onClose()
+            }
+
+            },setA(false))
         }
        },200)
        
@@ -109,7 +124,7 @@ const Popup=({onClose,update,dataEdit,setloading})=>{
         <Input defaultValue={data.maSP} onChange={e=>data.tenSP=e.target.value}></Input>
         <div>Giá Thành</div>
         <Input defaultValue={data.giaSP} onChange={e=>data.giaSP=e.target.value}></Input>
-        <UploadIMG></UploadIMG>
+        <UploadIMG onChange={setImg}></UploadIMG>
     </div></Modal>
 }
 export default Product

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Upload } from 'antd';
 import ImgCrop from 'antd-img-crop';
-const UploadIMG = () => {
+const UploadIMG = ({onChange,value}) => {
   const [fileList, setFileList] = useState([
     {
       uid: '-1',
@@ -10,7 +10,14 @@ const UploadIMG = () => {
       url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
     },
   ]);
-  const onChange = ({ fileList: newFileList }) => {
+  const onchange = ({ fileList: newFileList }) => {
+    onChange( {
+        uid: newFileList.uid,
+        name: newFileList.name,
+        status: newFileList.status,
+        url: newFileList.url,
+        file:newFileList.thumbUrl
+      },)
     setFileList(newFileList);
   };
   const onPreview = async (file) => {
@@ -33,7 +40,7 @@ const UploadIMG = () => {
         action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
         listType="picture-card"
         fileList={fileList}
-        onChange={onChange}
+        onChange={onchange}
         onPreview={onPreview}
       >
         {fileList.length < 5 && '+ Upload'}
