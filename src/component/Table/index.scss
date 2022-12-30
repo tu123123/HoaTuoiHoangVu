@@ -1,0 +1,35 @@
+.TableComponent{
+    height: calc( 100vh - 200px );
+    width: 92vw;
+    overflow: auto;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 191, 204);
+    table{
+        border-spacing: 0;
+        thead{
+            background: rgb(255, 191, 204);
+            position: sticky;
+            top: 0;
+            border-collapse: initial;
+            z-index: 10;
+          
+        }
+       
+        th,td{
+            border: 1px solid rgb(169, 118, 126);
+        }
+        min-width: 100%;
+        height: inherit;
+        background: white;
+        tbody{
+            height: 30px
+        }
+        .TableComponentnoitem{
+            height: initial !important;
+          td{border: none !important;}  
+        }
+      
+    }
+  
+}

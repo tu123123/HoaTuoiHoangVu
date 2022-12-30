@@ -1,0 +1,44 @@
+.ModalComponent{
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    position: absolute;
+    z-index: 100;
+    background: rgba(16, 16, 16, 0.433);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .modalContainer{
+        position: absolute;
+        min-height: 200px;
+        min-width: 200px;
+        border-radius: 10px;
+        background: white;
+        padding: 10px;
+        .head-modalContainer{
+           border-bottom: 1px plum solid ;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            img{
+                position: absolute;
+                background: white;
+                border-radius: 50%;
+                cursor: pointer;
+                right: -45px;
+                top: -20px;
+                height: 30px;
+            }
+        }
+        .body-modalContainer{
+            height: inherit;
+            max-height: 80vh;
+            overflow: auto;
+        }
+        .footer-modalContainer{
+            display: flex;
+            justify-content: end;
+        }
+    }
+}

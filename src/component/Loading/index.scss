@@ -1,0 +1,23 @@
+.LoadingContainer{
+    height: 100%;
+    z-index: 80;
+    width: 100%;
+    background: rgba(43, 38, 38, 0.392);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    .l-content{
+        img{
+            animation: loading 1s infinite linear;
+        }
+    }
+}
+@keyframes loading {
+    0%{
+        transform: rotate(360deg);
+    }
+    
+}
