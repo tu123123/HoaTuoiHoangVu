@@ -8,9 +8,9 @@ function App() {
 
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Main />}>
+      <Route path="/" exact element={<Main />}>
       </Route>
-      <Route path="/setting" element={<Setting />}>
+      <Route path="/setting" exact element={<Setting />}>
       </Route>
     </Routes>
   </BrowserRouter>
