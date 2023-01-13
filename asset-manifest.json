@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/HoaTuoiHoangVu/static/css/main.d68fa2de.css",
-    "main.js": "/HoaTuoiHoangVu/static/js/main.f3592606.js",
-    "static/js/787.28cb0dcd.chunk.js": "/HoaTuoiHoangVu/static/js/787.28cb0dcd.chunk.js",
-    "static/media/sakura.png": "/HoaTuoiHoangVu/static/media/sakura.ac05cfab032cf1976c5f.png",
-    "static/media/remove.svg": "/HoaTuoiHoangVu/static/media/remove.533f687c0efc420b1e43cf0bc89133d6.svg",
-    "static/media/logo.svg": "/HoaTuoiHoangVu/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "static/media/plus.svg": "/HoaTuoiHoangVu/static/media/plus.499e1b71caa6122b87b43b7e65c162a6.svg",
-    "static/media/down.svg": "/HoaTuoiHoangVu/static/media/down.123383e65731c389b9058b327efe81d6.svg",
-    "static/media/close.svg": "/HoaTuoiHoangVu/static/media/close.4e610251bc54c29a323788cfcd5526be.svg",
-    "static/media/sub.svg": "/HoaTuoiHoangVu/static/media/sub.a49c44ca8cc68995e2eac1379779389c.svg",
-    "index.html": "/HoaTuoiHoangVu/index.html",
-    "main.d68fa2de.css.map": "/HoaTuoiHoangVu/static/css/main.d68fa2de.css.map",
-    "main.f3592606.js.map": "/HoaTuoiHoangVu/static/js/main.f3592606.js.map",
-    "787.28cb0dcd.chunk.js.map": "/HoaTuoiHoangVu/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "./static/css/main.d68fa2de.css",
+    "main.js": "./static/js/main.0d4b4f32.js",
+    "static/js/787.28cb0dcd.chunk.js": "./static/js/787.28cb0dcd.chunk.js",
+    "static/media/sakura.png": "./static/media/sakura.ac05cfab032cf1976c5f.png",
+    "static/media/remove.svg": "./static/media/remove.533f687c0efc420b1e43cf0bc89133d6.svg",
+    "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/plus.svg": "./static/media/plus.499e1b71caa6122b87b43b7e65c162a6.svg",
+    "static/media/down.svg": "./static/media/down.123383e65731c389b9058b327efe81d6.svg",
+    "static/media/close.svg": "./static/media/close.4e610251bc54c29a323788cfcd5526be.svg",
+    "static/media/sub.svg": "./static/media/sub.a49c44ca8cc68995e2eac1379779389c.svg",
+    "index.html": "./index.html",
+    "main.d68fa2de.css.map": "./static/css/main.d68fa2de.css.map",
+    "main.0d4b4f32.js.map": "./static/js/main.0d4b4f32.js.map",
+    "787.28cb0dcd.chunk.js.map": "./static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d68fa2de.css",
-    "static/js/main.f3592606.js"
+    "static/js/main.0d4b4f32.js"
   ]
 }
