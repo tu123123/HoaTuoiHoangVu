@@ -1,0 +1,36 @@
+.componentSelect{
+    position: relative;
+    img{
+        transition: 0.5s;
+    }
+    .inputSelect{
+    cursor: pointer;
+        &:hover{
+            background: rgba(234, 189, 196, 0.555);
+            
+        }
+    align-items: center;
+    display: grid;
+    height: 30px;
+    grid-template-columns: 1fr 30px;
+    }
+}
+.dropSelectComponent{
+    height: 200px;
+
+    div{
+        padding: 5px;
+        border-bottom: 1px solid  rgba(234, 189, 196, 0.788);
+        cursor: pointer;
+        &:hover{
+            background: rgba(234, 189, 196, 0.555);
+        }
+    }
+    position: absolute;
+    display: none;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px rgba(112, 69, 69, 0.399);
+    top: 0;
+    z-index: 100;
+}

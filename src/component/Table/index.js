@@ -1,7 +1,7 @@
 import './index.scss'
 import Loading from '../Loading'
 import { useEffect,useState } from 'react'
-const Table =({columns,data,onRow,loading})=>{
+const Table =({columns,data,onRow,loading,style})=>{
     const [dataSoucre,setDataSource]=useState([])
     useEffect(()=>{
        if(data)
@@ -10,7 +10,7 @@ const Table =({columns,data,onRow,loading})=>{
        }
     },[data])
 
-    return <div className='TableComponent'>
+    return <div style={{...style}} className='TableComponent'>
          {loading==true?<Loading></Loading>:undefined}
         <table>
     <thead>
@@ -22,11 +22,11 @@ const Table =({columns,data,onRow,loading})=>{
     </thead>
     <tbody>
     {dataSoucre?.map((i,index)=>{
-       return <tr onDoubleClick={()=>{
+       return <tr style={onRow.style?onRow.style(i):undefined}  onDoubleClick={()=>{
         onRow.onDoubleClick(i)
        }} onClick={()=>{onRow.onClick(i)}} key={index}>
             {columns.map((j,jndex)=>{
-                return <td key={jndex}>{j.render?j.render(i[j.dataIndex],i):i[j.dataIndex]}</td>
+                return <td style={columns.style?columns.style(i):undefined} key={jndex}>{j.render?j.render(i[j.dataIndex],i):i[j.dataIndex]}</td>
             })}
         </tr>
     })}

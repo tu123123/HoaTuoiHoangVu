@@ -1,11 +1,12 @@
-{
+{    "homepage": "https://tu123123.github.io/HoaTuoiHoangVu/",
   "name": "my-app",
   "version": "0.1.0",
+  
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
-    "homepage": "https://tu123123.github.io/HoaTuoiHoangVu/",
+
     "@testing-library/user-event": "^13.2.1",
     "antd": "^5.1.1",
     "antd-img-crop": "^4.5.2",
